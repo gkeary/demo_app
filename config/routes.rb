@@ -1,7 +1,6 @@
 DemoApp::Application.routes.draw do
-  resources :microposts
-
   resources :users
+  resources :microposts
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -60,3 +59,19 @@ DemoApp::Application.routes.draw do
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id(.:format)))'
 end
+#== Route Map
+# Generated on 13 Nov 2011 07:51
+#
+#                POST   /users(.:format)               {:action=>"create", :controller=>"users"}
+#       new_user GET    /users/new(.:format)           {:action=>"new", :controller=>"users"}
+#      edit_user GET    /users/:id/edit(.:format)      {:action=>"edit", :controller=>"users"}
+#           user GET    /users/:id(.:format)           {:action=>"show", :controller=>"users"}
+#                PUT    /users/:id(.:format)           {:action=>"update", :controller=>"users"}
+#                DELETE /users/:id(.:format)           {:action=>"destroy", :controller=>"users"}
+#     microposts GET    /microposts(.:format)          {:action=>"index", :controller=>"microposts"}
+#                POST   /microposts(.:format)          {:action=>"create", :controller=>"microposts"}
+#  new_micropost GET    /microposts/new(.:format)      {:action=>"new", :controller=>"microposts"}
+# edit_micropost GET    /microposts/:id/edit(.:format) {:action=>"edit", :controller=>"microposts"}
+#      micropost GET    /microposts/:id(.:format)      {:action=>"show", :controller=>"microposts"}
+#                PUT    /microposts/:id(.:format)      {:action=>"update", :controller=>"microposts"}
+#                DELETE /microposts/:id(.:format)      {:action=>"destroy", :controller=>"microposts"}
